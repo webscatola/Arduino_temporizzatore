@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//IT">
+
+<html>
+<!--<style> inserire qui codice fogli di stile </style>-->
+
+	<head>
+		<title>Irrigazione giardino</title>				<!--   visualizzato sulla finestra del brower         -->
+		<h2 >Irrigazione giardino</h2>                   <!--   utilizzato per creare un indice                --> 
+		<link rel="stylesheet" type="text/css" href="stile.css">														<!--  File fogli di stilecss3  --> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>     <!-- Dichiarazione del linguaggio di script da utilizzare  -->
+		<script type='text/javascript' src='sq.js'></script>															<!--  File scrip jquery  --> 
+		
+	</head>
+	<body class="sfondo">
+	<div id="main">
+	
+	
+	<!-- <span class="immagine"> <img src="http://www.immaginarioscientifico.it/wp-content/header-images/header_verdeimmaginario.png"> <span>  -->
+		<form name="programmazioneirrigazione" action="progirr.htm" method="get">
+		<span class="conf"><a href="./config.htm">Configurazione</a></span>
+		</br>
+		</br>
+		</br>
+			<!--<fieldset>
+				<legend>Programmazione</legend>  -->
+				&nbsp &nbsp <span class="titolo">Programmazione</span>
+				<div id="abc" class="programmazione1">	
+					<input id="progirra" type="radio" name="irrigazione" value="on" checked> irrigazione programmata &nbsp &nbsp &nbsp				<!--devono avere lo stesso valore name in modo tale che si possano abilitare solo una pulsante radio per gruppo-->
+					<input id="progirrd" type="radio" name="irrigazione" value="off" > irrigazione disattivata &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<input id="progirri" type="radio" name="irrigazione" value="test"> irrigazione immediata  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					<span id="irrigazioneimmediata">
+					durata irrigazione in minuti: &nbsp
+						<select name="im">																<!--  menù minuti    -->
+							<option value="00">00</option>
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="59">59</option>
+						</select>
+						</br>
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<input type="checkbox" name="1i" value="on">Settore 1 &nbsp
+						<input type="checkbox" name="2i" value="on">Settore 2 &nbsp
+						<input type="checkbox" name="3i" value="on">Settore 3 &nbsp
+						<input type="checkbox" name="4i" value="on">Settore 4 &nbsp
+						<input type="checkbox" name="5i" value="on">Settore 5 &nbsp
+						</span>
+					</div>
+					
+			<!-- </fieldset>  -->
+			</br>
+			</br>
+			</br>
+			<div id="mainsettori">
+			<!--<fieldset>
+				<legend>Settore 1</legend>-->
+				&nbsp &nbsp <span class= titolo>Settore 1</span>
+				<div id="abc25" class="programmazione1">
+					<!--Settore 1 &nbsp &nbsp &nbsp-->
+					<input type="radio" id="s1a" name="s1" value="on"> attivo &nbsp &nbsp &nbsp					<!--  radio button    -->
+					<input type="radio" id="s1d" name="s1" value="off" checked> Disattivo
+					</br>
+					</br>																					<!--  checkbox    -->
+					<input type="checkbox" id="s1g" name="s1s" value="lun">Lunedì &nbsp
+					<input type="checkbox" id="s1g" name="s1s" value="mar">Martedì &nbsp
+					<input type="checkbox" id="s1g" name="s1s" value="mer">Mercoledì &nbsp
+					<input type="checkbox" id="s1g" name="s1s" value="gio">Giovedì &nbsp
+					<input type="checkbox" id="s1g" name="s1s" value="ven">Venerdì &nbsp
+					<input type="checkbox" id="s1g" name="s1s" value="sab">Sabato &nbsp
+					<input type="checkbox" id="s1g" name="s1s" value="dom">Domenica &nbsp
+					
+					</br>
+					</br>
+					Ora avvio: &nbsp
+					<select name="s1h">																<!--  menù ore    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+					</select>	
+					:
+					<select name="s1m">																<!--  menù minuti    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="59">59</option>
+					</select>
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					
+					Durata irrigazione in minuti : &nbsp
+					<select name="s1t">																<!--  menù durata irrigazione    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="59">59</option>
+					</select>
+					</div>
+			<!--</fieldset> -->
+			</br>
+			</br>
+			</br>
+			<!--<fieldset>
+				<legend>Settore 1</legend>-->
+				&nbsp &nbsp <span class= titolo>Settore 2</span>
+				<div id="abc25" class="programmazione1">
+					<!--Settore 1 &nbsp &nbsp &nbsp-->
+					<input type="radio" id="s2a" name="s2" value="on"> Attivo &nbsp &nbsp &nbsp					<!--  radio button    -->
+					<input type="radio" id="s2d" name="s2" value="off" checked> Disattivo
+					</br>
+					</br>																					<!--  checkbox    -->
+					<input type="checkbox" id="s2g" name="s2s" value="lun">Lunedì &nbsp
+					<input type="checkbox" id="s2g" name="s2s" value="mar">Martedì &nbsp
+					<input type="checkbox" id="s2g" name="s2s" value="mer">Mercoledì &nbsp
+					<input type="checkbox" id="s2g" name="s2s" value="gio">Giovedì &nbsp
+					<input type="checkbox" id="s2g" name="s2s" value="ven">Venerdì &nbsp
+					<input type="checkbox" id="s2g" name="s2s" value="sab">Sabato &nbsp
+					<input type="checkbox" id="s2g" name="s2s" value="dom">Domenica &nbsp
+					
+					</br>
+					</br>
+					Ora avvio: &nbsp
+					<select name="s2h">																<!--  menù ore    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+					</select>	
+					:
+					<select name="s2m">																<!--  menù minuti    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="59">59</option>
+					</select>
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					
+					Durata irrigazione in minuti : &nbsp
+					<select name="s2t">																<!--  menù durata irrigazione    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="59">59</option>
+					</select>
+					</div>
+			<!--</fieldset> -->
+		        </br>
+			</br>
+			</br>
+			<!--<fieldset>
+				<legend>Settore 3</legend>-->
+				&nbsp &nbsp <span class= titolo>Settore 3</span>
+				<div id="abc25" class="programmazione1">
+					<!--Settore 1 &nbsp &nbsp &nbsp-->
+					<input type="radio" id="s3a" name="s3" value="on"> Attivo &nbsp &nbsp &nbsp					<!--  radio button    -->
+					<input type="radio" id="s3d" name="s3" value="off" checked> Disattivo
+					</br>
+					</br>																					<!--  checkbox    -->
+					<input type="checkbox" id="s3g" name="s3s" value="lun">Lunedì &nbsp
+					<input type="checkbox" id="s3g" name="s3s" value="mar">Martedì &nbsp
+					<input type="checkbox" id="s3g" name="s3s" value="mer">Mercoledì &nbsp
+					<input type="checkbox" id="s3g" name="s3s" value="gio">Giovedì &nbsp
+					<input type="checkbox" id="s3g" name="s3s" value="ven">Venerdì &nbsp
+					<input type="checkbox" id="s3g" name="s3s" value="sab">Sabato &nbsp
+					<input type="checkbox" id="s3g" name="s3s" value="dom">Domenica &nbsp
+					
+					</br>
+					</br>
+					Ora avvio: &nbsp
+					<select name="s3h">																<!--  menù ore    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+					</select>	
+					:
+					<select name="s3m">																<!--  menù minuti    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="59">59</option>
+					</select>
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+					
+					Durata irrigazione in minuti : &nbsp
+					<select name="s3t">																<!--  menù durata irrigazione    -->
+						<option value="00">00</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="59">59</option>
+					</select>
+					</div>
+			<!--</fieldset> -->																							
+																										
+																					
+			
+			
+			
+			
+			</div>   <!-- mainsettori-->
+		
+
+		</br>
+		</br>
+		</br>
+		<button type="submit" name="salva" value="salva"> Salva  </button>
+		<button id="buttonreset" type="reset" name="reset" value="reset"> Reset  </button>
+		</form>
+		</div>
+	</body>
+</html>
+<!--<div>1</div> [22:53:01] Rosario Grosso: i numeri poi li cambi te con javascript[22:53:11] Rosario Grosso: ogni volta che clicchi devi aggiungere o togliere[22:53:29] Rosario Grosso: <div id="hour">1</div> -->

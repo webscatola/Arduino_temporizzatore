@@ -1,0 +1,56 @@
+.programmazione1 {
+	width:950px;
+	padding: 10px 15px 5px 15px;      /* crea spazio interno alla cella */
+	border-top: 1px solid #fff;
+	/*background-image: url(http://www.immaginarioscientifico.it/wp-content/header-images/header_verdeimmaginario.png);*/
+	background-color: grey;        /*#A6DADC;*/
+	border-radius: 20px;			/* arrotonda i bordi  */
+	/*trasform: rotate(-50deg);*/
+}
+button {
+	border-radius: 20px;
+}
+.titolo{
+	/*background-image: url(http://www.immaginarioscientifico.it/wp-content/header-images/header_verdeimmaginario.png);*/
+	padding: 10px 15px 5px 15px;      /* crea spazio interno alla cella */
+	background-color: green;
+	border-top-right-radius: 20px;			/* arrotonda i bordi  */
+	border-top-left-radius:20px;
+}
+.conf{
+	padding: 10px 15px 5px 15px;      /* crea spazio interno alla cella */
+	border-top: 1px solid #fff;
+	/*background-image: url(http://www.immaginarioscientifico.it/wp-content/header-images/header_verdeimmaginario.png);*/
+	background-color: white;        /*#A6DADC;*/
+	opacity:0.5;
+	border-radius: 20px;
+	transform: translate(600px, 30px);
+    -ms-transform: translate(600px, 30px);
+    -moz-transform: translate(600px, 30px);
+    -webkit-transform: translate(600px, 30px);
+    -o-transform: translate(600px, 30px);
+}
+
+
+.immagine {
+  /* background-color: red  */
+  border-radius: 20px;			/* arrotonda i bordi  */
+}
+
+.sfondo{
+/*background-image: url(http://www.settemuse.it/sfondi_piante_fiori/fiori_di_prato/fiori_di_prato_001.jpg);*/
+background-image: url(http://www.vettorialigratis.it/wp-content/uploads/2010/08/Cielo-con-erba-Sky-with-grass.jpg);
+background-repeat: no-repeat;
+
+}
+
+#main{
+    margin:auto;
+	text-align: left;
+	width: 900px;
+}
+h2{
+    margin:auto;
+	text-align: left;
+	width: 500px;
+}
